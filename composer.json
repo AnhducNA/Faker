@@ -1,0 +1,16 @@
+{
+    "name": "anhduc/faker",
+    "autoload": {
+        "psr-4": {
+            "Anhduc\\Faker\\": "assets/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anhduc"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.21"
+    }
+}

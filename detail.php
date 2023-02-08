@@ -182,9 +182,7 @@ $newsObject = new \oop\Faker\Provider\News();
 
             </div>
             <div class="box-content">
-                <p class="p-headding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices iaculis est
-                    curabitur
-                    arcu augue amet. Nisi augue sit euismod </p>
+                <p class="p-headding"><?php echo $newsObject->fakeTitle(300) ?></p>
                 <div class="d-flex justify-content-between flex-column flex-md-row text-center">
                     <ul>
                         <li><a href="#"><p>Xã hội</p></a></li>
@@ -223,49 +221,25 @@ $newsObject = new \oop\Faker\Provider\News();
                 <a href="#"><img alt="main-news.png" src="<?php echo $newsObject->fakeImageUrl(960, 760, 'main-news.png') ?>"></a>
             </p>
             <p class="p-content1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem id varius rutrum aliquam. Diam ullamcorper
-                ut mattis fringilla nunc, sed eu nisi. Amet, duis auctor tempor sit mauris rhoncus. Pretium at massa sed
-                morbi sit tincidunt arcu. Pharetra, turpis id elementum cursus amet, eu scelerisque ipsum. Suspendisse
-                nulla congue mauris mattis diam sed venenatis non bibendum. Vestibulum, lobortis aenean lorem aenean
-                sagittis. Et nibh ullamcorper justo cursus eget. Tortor faucibus volutpat, vel nullam sed massa
-                ullamcorper in ultrices. Augue viverra tincidunt amet, neque, dictum tellus turpis. Ipsum nisl mi est,
-                tempus phasellus morbi quisque. Mi sed sit amet ipsum. Mi erat leo fringilla ullamcorper.
-                Aenean gravida cursus tempus nullam ipsum sit et. Id pellentesque vel, mattis massa vitae. Amet, vel
-                nunc sed adipiscing fermentum suspendisse est bibendum. Elit interdum tincidunt diam egestas condimentum
-                nibh. Massa mollis vitae id morbi pulvinar tincidunt. Risus euismod nec fringilla eros, commodo. Odio
-                morbi in at penatibus eleifend orci scelerisque. Auctor ornare volutpat penatibus maecenas vel. Luctus
-                libero at in ut justo molestie aliquet. Ultricies suspendisse hac nibh vivamus facilisis nulla.
-                Augue et elit velit malesuada sit egestas et augue volutpat. Sagittis, suspendisse semper mi faucibus
-                aliquam eget. Cras diam nunc, malesuada amet imperdiet quis molestie. Nibh nunc lacus quis quis nisi
-                integer. Tincidunt viverra semper nisl, quis vel cras fermentum. Porttitor tortor urna pulvinar rhoncus,
-                adipiscing nisl facilisi vulputate. Massa vestibulum lorem nunc purus phasellus commodo praesent a.
-                Proin integer non ultrices sagittis, sit non adipiscing eu risus. Ac dignissim malesuada et lectus ut
-                iaculis at libero. Id ut non consectetur cursus purus. Egestas cursus vitae odio enim. Nunc, non ac quam
-                gravida in. Odio morbi ullamcorper nullam nisi, risus, donec.
+                <?php echo $newsObject->fakeContent(2000) ?>
             </p>
             <div class="box-img1 d-flex justify-content-between">
                 <div class="main-item">
-                    <a href="#"><img alt="news-detail-main.png" src="assets/images/news/news-detail-main.png"></a>
+                    <a href="#"><img alt="news-detail-main.png" src="<?php echo $newsObject->fakeImageUrl(634, 690, 'news-detail-main.png') ?>"></a>
                 </div>
                 <div class="sub-item">
                     <div class="sub-item-child col-6 col-sm-12 pl-0">
                         <a href="#"> <img alt="news-detail1.png" class="w-100 h-100"
-                                          src="assets/images/news/news-detail1.png"></a>
+                                          src="<?php echo $newsObject->fakeImageUrl(307, 335, 'news-detail1.png') ?>"></a>
                     </div>
                     <div class="sub-item-child col-6 col-sm-12 pr-0">
                         <a href="#"><img alt="news-detail2.png" class="w-100 h-100"
-                                         src="assets/images/news/news-detail2.png"></a>
+                                         src="<?php echo $newsObject->fakeImageUrl(307, 335, 'news-detail2.png') ?>"></a>
                     </div>
                 </div>
             </div>
-            <p class="p-headding2">Lorem ipsum dolor sit amet, </p>
-            <p class="p-content2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem id varius rutrum aliquam.
-                Diam ullamcorper
-                ut mattis fringilla nunc, sed eu nisi. Amet, duis auctor tempor sit mauris rhoncus. Pretium at massa sed
-                morbi sit tincidunt arcu. Pharetra, turpis id elementum cursus amet, eu scelerisque ipsum. Suspendisse
-                nulla congue mauris mattis diam sed venenatis non bibendum. Vestibulum, lobortis aenean lorem aenean
-                sagittis. Et nibh ullamcorper justo cursus eget. Tortor faucibus volutpat, vel nullam sed massa
-                ullamcorper in ultrices. Augue viverra tincidunt amet, </p>
+            <p class="p-headding2"><?php echo $newsObject->fakeTitle(50) ?></p>
+            <p class="p-content2"><?php echo $newsObject->fakeContent() ?></p>
 
             <div>
                 <ul class="p-content2">

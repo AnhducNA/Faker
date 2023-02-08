@@ -66,10 +66,10 @@ class News
         return Factory::create("vi_VN");
     }
 
-    public function fakeTitle()
+    public function fakeTitle($maxNbChars = 50)
     {
         $faker = $this->createFaker();
-        return $faker->text($maxNbChars = 50);
+        return $faker->text($maxNbChars);
     }
 
     public function fakeName()
@@ -84,10 +84,10 @@ class News
         return $faker->dateTime()->format('d/m/Y');
     }
 
-    public function fakeContent()
+    public function fakeContent($maxNbChars = 500)
     {
         $faker = $this->createFaker();
-        return $faker->text();
+        return $faker->text($maxNbChars);
     }
     public function fakeImageUrl($width, $height, $category)
     {

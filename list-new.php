@@ -1,10 +1,8 @@
 <?php
 require_once 'vendor/autoload.php';
-require 'faker.php';
+require 'oop/Faker/Provider/News.php';
 
-/**
- * @var $faker
- */
+$newsObject = new \oop\Faker\Provider\News();
 ?>
 <!doctype html>
 <html lang="en">
@@ -235,7 +233,7 @@ require 'faker.php';
                         <div class="box-top ">
                             <a href="detail.html" class="w-100 h-100">
                                 <img class="img-main-news"
-                                     src="<?php echo $faker->imageUrl(468, 300, 'vnp-group', true) ?>"
+                                     src="<?php echo $newsObject->fakeImageUrl(468, 300,'main-news') ?>"
                                      alt="main-news.png">
                             </a>
                             <span class="icon-heart">
@@ -244,20 +242,20 @@ require 'faker.php';
                         </div>
                         <div class="box-content ">
                             <a href="detail.html">
-                                <p class="p-title"><?php echo $faker->text($maxNbChars = 150); ?></p></a>
+                                <p class="p-title"><?php echo $newsObject->fakeTitle(150)?></p></a>
                             <ul>
                                 <li><a href="#"><p>Xã hội</p></a></li>
                                 <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
                                                            xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p><?php echo $faker->name ?></p></li>
+                                <li><p><?php echo $newsObject->fakeName() ?></p></li>
                                 <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
                                                            xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p><?php echo $faker->dateTime()->format('d/m/Y'); ?></p></li>
+                                <li><p><?php echo $newsObject->fakeDateTime() ?></p></li>
                             </ul>
                             <p class="p-content">
-                                <?php echo $faker->text($maxNbChars = 300); ?>
+                                <?php echo $newsObject->fakeContent(300) ?>
                             </p>
                         </div>
                     </div>

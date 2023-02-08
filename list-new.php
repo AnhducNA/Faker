@@ -1,3 +1,11 @@
+<?php
+require_once 'vendor/autoload.php';
+require 'faker.php';
+
+/**
+ * @var $faker
+ */
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -159,7 +167,7 @@
         </div>
     </div>
 </div>
-<div id="content" class="video-page">
+<div id="content" class="list-news-page">
     <div class="carousel">
         <ol class="carousel-indicators">
             <li class="carousel-indicators-item active"></li>
@@ -202,10 +210,10 @@
         <nav class="sub-menu navbar navbar-expand-lg ">
             <ul class="navbar-nav w-100">
                 <li class="nav-item">
-                    <a class="btn btn-sub-menu" href="index.html">Tất cả</a>
+                    <a class="btn btn-sub-menu" href="index.php">Tất cả</a>
                 </li>
-                <li class="nav-item">
-                    <a class="btn btn-sub-menu" href="list-new.html">Xã hội</a>
+                <li class="nav-item active">
+                    <a class="btn btn-sub-menu" href="list-new.php">Xã hội</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-sub-menu" href="#">Nhà đất</a>
@@ -213,140 +221,52 @@
                 <li class="nav-item">
                     <a class="btn btn-sub-menu" href="#">Đời sống</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="btn btn-sub-menu" href="video.html">Video</a>
+                <li class="nav-item">
+                    <a class="btn btn-sub-menu" href="video.php">Video</a>
                 </li>
             </ul>
         </nav>
-        <div class="video">
-            <div class="video-content row">
-                <div class="main-video col-sm-12 col-md-main-video box">
-                    <div class="box-top">
-                        <a href="" class="w-100 h-100">
-                            <img class="" src="assets/images/videos/main-video.png" alt="main-video.png">
-                        </a>
-                        <span class="pause-video">
-                            <img src="assets/images/stop-video.png" alt="stop-video.png">
-                        </span>
-                        <span class="icon-heart">
-                                <i class="fa-solid fa-heart"></i>
-                        </span>
-                        <div class="box-content">
-                            <p class="p-title">Đi dạo cạnh đường cao tốc Pháp Vân Cầu Giẽ ổn không?</p>
-                            <ul>
-                                <li><a href="#">5542 lượt xem</a></li>
-                                <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
-                                                           xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p>24/02/2020</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <p class="p-all-video d-none">Tất cả video</p>
-                <div class="sub-video row col-sm-12 col-md-sub-video box">
-                    <div class="sub-video-item col-sm-4 col-md-12">
-                        <div class="box-top">
-                            <a href="" class="w-100 h-100">
-                                <img class="img-main-news" src="assets/images/videos/sub-video1.png"
+        <div class="list-news">
+            <nav class="list-news-content box d-flex flex-column">
+                <?php $i = 1;
+                do {
+                    ?>
+                    <div class="item-news row">
+                        <div class="box-top ">
+                            <a href="detail.html" class="w-100 h-100">
+                                <img class="img-main-news"
+                                     src="<?php echo $faker->imageUrl(468, 300, 'vnp-group', true) ?>"
                                      alt="main-news.png">
                             </a>
-                            <span class="pause-video">
-                              <img src="assets/images/stop-video.png" alt="stop-video.png">
-                            </span>
                             <span class="icon-heart">
                                 <i class="fa-solid fa-heart"></i>
-                            </span>
+                           </span>
                         </div>
-                        <div class="box-content">
-                            <p class="p-title">Making a Housing Wage: Where Teachers, First Responders and Restaurant
-                                Workers Can Live Where They Work</p>
+                        <div class="box-content ">
+                            <a href="detail.html">
+                                <p class="p-title"><?php echo $faker->text($maxNbChars = 150); ?></p></a>
                             <ul>
-                                <li><p class="p-view">5542 lượt xem</p></li>
+                                <li><a href="#"><p>Xã hội</p></a></li>
                                 <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
                                                            xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p class="p-date">24/02/2020</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sub-video-item col-sm-4 col-md-12">
-                        <div class="box-top">
-                            <a href="" class="w-100 h-100">
-                                <img class="img-main-news" src="assets/images/videos/sub-video1.png"
-                                     alt="main-news.png">
-                            </a>
-                            <span class="pause-video">
-                              <img src="assets/images/stop-video.png" alt="stop-video.png">
-                            </span>
-                            <span class="icon-heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </span>
-                        </div>
-                        <div class="box-content">
-                            <p class="p-title">Making a Housing Wage: Where Teachers, First Responders and Restaurant
-                                Workers Can Live Where They Work</p>
-                            <ul>
-                                <li><p class="p-view">5542 lượt xem</p></li>
+                                <li><p><?php echo $faker->name ?></p></li>
                                 <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
                                                            xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p class="p-date">24/02/2020</p></li>
+                                <li><p><?php echo $faker->dateTime()->format('d/m/Y'); ?></p></li>
                             </ul>
+                            <p class="p-content">
+                                <?php echo $faker->text($maxNbChars = 300); ?>
+                            </p>
                         </div>
                     </div>
-                    <div class="sub-video-item col-sm-4 col-md-12">
-                        <div class="box-top">
-                            <a href="" class="w-100 h-100">
-                                <img class="img-main-news" src="assets/images/videos/sub-video1.png"
-                                     alt="main-news.png">
-                            </a>
-                            <span class="pause-video">
-                              <img src="assets/images/stop-video.png" alt="stop-video.png">
-                            </span>
-                            <span class="icon-heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </span>
-                        </div>
-                        <div class="box-content">
-                            <p class="p-title">Making a Housing Wage: Where Teachers, First Responders and Restaurant
-                                Workers Can Live Where They Work</p>
-                            <ul>
-                                <li><p class="p-view">5542 lượt xem</p></li>
-                                <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
-                                                           xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p class="p-date">24/02/2020</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sub-video-item col-sm-4 col-md-12">
-                        <div class="box-top">
-                            <a href="" class="w-100 h-100">
-                                <img class="img-main-news" src="assets/images/videos/sub-video1.png"
-                                     alt="main-news.png">
-                            </a>
-                            <span class="pause-video">
-                              <img src="assets/images/stop-video.png" alt="stop-video.png">
-                            </span>
-                            <span class="icon-heart">
-                                <i class="fa-solid fa-heart"></i>
-                            </span>
-                        </div>
-                        <div class="box-content">
-                            <p class="p-title">Making a Housing Wage: Where Teachers, First Responders and Restaurant
-                                Workers Can Live Where They Work</p>
-                            <ul>
-                                <li><p class="p-view">5542 lượt xem</p></li>
-                                <li><span class="dot"><svg width="3" height="4" viewBox="0 0 3 4" fill="none"
-                                                           xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="1.5" cy="1.56641" r="1.5" fill="#3B4144"/></svg></span></li>
-                                <li><p class="p-date">24/02/2020</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <?php
+                    $i++;
+                } while ($i <= 5)
+                ?>
+
+            </nav>
         </div>
         <div class="text-center">
             <a href="" class="btn btn-outline-dark">Xem thêm</a>
@@ -380,4 +300,4 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
 </body>
-</html>
+</html>s
